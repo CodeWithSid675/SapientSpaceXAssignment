@@ -1,0 +1,11 @@
+{
+    "rulesDirectory": [
+        "/"
+    ],
+    "rules": {
+        "custom-no-console": true
+    },
+    "jsRules": {
+        "no-empty": true
+    }
+}

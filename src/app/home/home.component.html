@@ -1,0 +1,21 @@
+<div class="home-container background-light text-dark">
+    <div class="row-col-flex margin-bottom-4">
+        <header role="heading">
+            <h1> SpaceX Launch Programs </h1>
+        </header>
+    </div>
+    <div class="row-col-flex">
+        <div class="columne-side-filter">
+            <app-side-filter></app-side-filter>
+        </div>
+        <div class="columne-spacex-card">
+            <app-spacex-card (emitLoaderStarter)="emitLoaderStarter($event)"></app-spacex-card>
+        </div>
+    </div>
+    <div class="row-col-flex">
+        <footer>
+            <h5>Developed By :- {{developerName}}</h5>
+        </footer>
+    </div>
+</div>
+<ngx-spinner></ngx-spinner>

@@ -1,0 +1,63 @@
+@import "../../mixin";
+
+.home-container {
+	width: 100%;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	margin-right: auto;
+	margin-left: auto;
+	@include sm {
+		max-width: 540px;
+	}
+	@include md {
+		max-width: 720px;
+	}
+	@include lg {
+		max-width: 960px;
+	}
+	@include xl {
+		max-width: 1140px;
+	}
+	h1 {
+		font-weight: bolder;
+	}
+	h5 {
+		text-align: center;
+	}
+	.columne-side-filter {
+		@include sm {
+			flex: 0 0 auto;
+			width: 25%;
+		}
+		@include md {
+			flex: 0 0 auto;
+			width: 25%;
+		}
+		@include lg {
+			flex: 0 0 auto;
+			width: 25%;
+		}
+		@include xl {
+			flex: 0 0 auto;
+			width: 16.666667%;
+		}
+	}
+	.columne-spacex-card {
+		@include sm {
+			flex: 0 0 auto;
+			width: 75%;
+		}
+		@include md {
+			flex: 0 0 auto;
+			width: 75%;
+		}
+		@include lg {
+			flex: 0 0 auto;
+			width: 75%;
+		}
+		@include xl {
+			flex: 0 0 auto;
+			width: 83.333333%;
+		}
+	}
+}

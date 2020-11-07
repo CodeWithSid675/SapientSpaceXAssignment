@@ -1,0 +1,44 @@
+<ng-template [ngIf]="spaceXData.length > 0" [ngIfElse]="noData">
+    <div id="spacex-card" class="row-col-flex">
+        <div class="card-columne margin-bottom-4" *ngFor="let value of spaceXData">
+            <div class="spacex-data-holder height-100">
+                <div class="spacex-data-body">
+                    <img class="spacex-img background-light" (load)="value.loaded = true" [hidden]="!value.loaded"
+                        [src]='value.links.mission_patch_small' alt="Card image" aria-label="mission_logo">
+                    <img class="placeholderimage" src="https://via.placeholder.com/150"
+                        [hidden]="value.loaded" aria-label="image_placeholder">
+                    <header class="text-navy" role="heading">
+                        <h5>{{value.mission_name}}#{{value.flight_number}}</h5>
+                    </header>
+                    <article role="article">
+                        <section>
+                            <label aria-label="mission_id"> Mission ids: </label>
+                            <ul>
+                                <li class="text-navy" *ngFor="let id of value.mission_id">
+                                    {{id}}
+                                </li>
+                            </ul>
+                        </section>
+                        <section>
+                            <label aria-label="mission_year">Launch year:</label>
+                            <span class="text-navy">{{value.launch_year}}</span>
+                        </section>
+                        <section>
+                            <label aria-label="mission_launch">Successful Launch:</label>
+                            <span class="text-navy">{{value.launch_success == true ? 'true' : 'false'}}</span>
+                        </section>
+                        <section>
+                            <label aria-label="mission_land">Successful Landing:</label>
+                            <span class="text-navy">{{value.rocket.first_stage.cores[0].land_success == true ? 'true' : 'false'}}</span>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+<ng-template #noData>
+    <h3 class="text-alert align-text-center">
+        No Data Found
+    </h3>
+</ng-template>

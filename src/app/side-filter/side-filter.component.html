@@ -1,0 +1,36 @@
+<div id="sidefilter" class="row-col-flex">
+    <div class="sidefilter-container margin-bottom-4">
+        <header>
+            <h3>Filters</h3>
+        </header>
+        <section>
+            <p class="row-col-flex content-center text-greyish align-text-center">Launch Year</p>
+            <hr>
+            <div class="row-col-flex">
+                <button type="button" class="filter-btn" *ngFor="let year of years;let i = index" [routerLink]="[]"
+                    [queryParams]="{ launch_year: years[i] }" queryParamsHandling="merge"
+                    aria-label="launch_year">{{year}}</button>
+            </div>
+        </section>
+        <section>
+            <p class="row-col-flex content-center text-greyish align-text-center"> Successful Launch</p>
+            <hr>
+            <div class="row-col-flex">
+                <button type="button" class="filter-btn" [routerLink]="[]" [queryParams]="{ launch_success: true }"
+                    queryParamsHandling="merge" aria-label="launch_successful">True</button>
+                <button type="button" class="filter-btn" [routerLink]="[]" [queryParams]="{ launch_success: false }"
+                    queryParamsHandling="merge" aria-label="launch_failure">False</button>
+            </div>
+        </section>
+        <section>
+            <p class="row-col-flex content-center text-greyish align-text-center">Successful Landing</p>
+            <hr>
+            <div class="row-col-flex">
+                <button type="button" class="filter-btn" [routerLink]="[]" [queryParams]="{ land_success: true }"
+                    queryParamsHandling="merge" aria-label="land_successful">True</button>
+                <button type="button" class="filter-btn" [routerLink]="[]" [queryParams]="{ land_success: false }"
+                    queryParamsHandling="merge" aria-label="land_failure">False</button>
+            </div>
+        </section>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+// /* You can add global styles to this file, and also import other style files */
+.row-col-flex {
+	--bs-gutter-x: 1.5rem;
+	--bs-gutter-y: 0;
+	display: flex;
+	flex: 1 0 100%;
+	flex-wrap: wrap;
+	margin-top: calc(var(--bs-gutter-y) * -1);
+	margin-right: calc(var(--bs-gutter-x) / -2);
+	margin-left: calc(var(--bs-gutter-x) / -2);
+}
+
+.row-col-flex > * {
+	flex-shrink: 0;
+	width: 100%;
+	max-width: 100%;
+	padding-right: calc(var(--bs-gutter-x) / 2);
+	padding-left: calc(var(--bs-gutter-x) / 2);
+	margin-top: var(--bs-gutter-y);
+}
+.margin-bottom-4 {
+	margin-bottom: 1.5rem !important;
+}
+.align-text-center {
+	text-align: center !important;
+}
+.text-alert {
+	color: #dc3545 !important;
+}
+.background-light {
+	background-color: #f8f9fa !important;
+}
+.text-navy {
+	color: navy !important;
+}
+.content-center {
+	justify-content: center !important;
+}
+.text-greyish {
+	color: #6c757d !important;
+}
