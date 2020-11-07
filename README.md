@@ -29,3 +29,11 @@ npm run build:ssr && npm run serve:ssr
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Lighthouse Score
+
+The complete light house report pdf url :- https://github.com/CodeWithSid675/SapientSpaceXAssignment/blob/main/Lighthouse%20Score.pdf
+
+The reference Screen shot
+
+![alt text](https://github.com/CodeWithSid675/SapientSpaceXAssignment/blob/main/Lighthouse.png?raw=true)
