@@ -1,7 +1,6 @@
 {
   "extends": [
-    "tslint:recommended",
-    "./src/newlintrules"
+    "tslint:recommended"
   ],
   "rules": {
     "array-type": false,

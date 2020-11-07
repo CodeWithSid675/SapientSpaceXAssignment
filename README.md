@@ -8,13 +8,11 @@ The key points of the assignment are:-
 
 1.	The initial launch programs landing page has to be server side rendered.
 2.	A boilerplate to implement the Server-side rendering can be used.
-3.  The custom lint code is also added to the build so that if the static code fail it will throw error during the build and stop the build.
-      npm run build:ssr in package.json command include ng lint which will first check for the any lint failure in the code and stop the build process.
-4.  A fully responsive site.
+3.  A fully responsive site.
 
 ## App Live Running
 
-  http://spacex-res-ssr-assignment.herokuapp.com
+ https://sapientspacexassignment.herokuapp.com
 
 ## Clone repository
 
