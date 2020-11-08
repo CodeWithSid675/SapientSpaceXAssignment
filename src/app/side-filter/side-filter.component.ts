@@ -15,7 +15,8 @@ export class SideFilterComponent implements OnInit {
 
   // get years form 2006
   getYears() {
-    let currentYear = new Date().getFullYear(), years = [];
+    const currentYear = new Date().getFullYear();
+    const years = [];
     let startYear = 2006;
     while (startYear <= currentYear) {
       years.push(startYear++);
