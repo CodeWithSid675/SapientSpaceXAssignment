@@ -13,18 +13,19 @@ export class SpacexCardComponent implements OnInit {
   constructor(private route: ActivatedRoute, private service: SpaceXCardSevice) { }
   spaceXData = [];
   @Output() emitLoaderStarter: EventEmitter<any> = new EventEmitter<any>();
+
   ngOnInit() {
     this.route.queryParams.subscribe((param: Params) => {
-        this.showSpaceXData(param);
+      this.showSpaceXData(param);
     });
   }
 
+  // get data and show data from service call
   showSpaceXData(param) {
     this.emitLoaderStarter.emit(true);
     this.service.getSpaceXData(param)
       .subscribe((data: []) => {
         this.emitLoaderStarter.emit(false);
-        // console.log("Test for Custom rules"); // Test For custom rules
         this.spaceXData = data.slice();
       });
   }

@@ -13,6 +13,8 @@ export class SpaceXCardSevice {
         launchSuccess: 'launch_success',
         landSuccess: 'land_success'
     };
+
+    // get data service from api call
     getSpaceXData(parameters) {
         let param = new HttpParams();
         if (!isUndefined(parameters)) {
@@ -31,21 +33,16 @@ export class SpaceXCardSevice {
             );
     }
 
+    // handle error
     private handleError(error: HttpErrorResponse) {
         if (error.error instanceof ErrorEvent) {
-            /*custom lint rules will break the build if console found in the code.
-                        Instead use alert if any error found*/
-            // console.error('An error occurred:', error.error.message);
-            alert(`An error occurred:, ${error.error.message}`);
+            console.error('An error occurred:', error.error.message);
         } else {
-            //     console.error(
-            //         `Backend returned code ${error.status}, ` +
-            //         `body was: ${error.error}`);
-            // }
-            alert(`Backend returned code ${error.status}, ` + `body was: ${error.error}`);
-
-            return throwError(
-                'Something bad happened; please try again later.');
+            console.error(
+                `Backend returned code ${error.status}, ` +
+                `body was: ${error.error}`);
         }
+        return throwError(
+            'Something bad happened; please try again later.');
     }
 }
